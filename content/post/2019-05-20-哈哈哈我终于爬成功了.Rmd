@@ -1,0 +1,31 @@
+---
+title: "\U0001F604哈哈哈我终于爬成功了"
+author: 范琴
+date: '2019-05-20'
+slug: 哈哈哈我终于爬成功了
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r}
+library(xml2)
+library(rvest)
+url<-'http://www.gov.cn/premier/2019-03/16/content_5374314.htm'
+web<-read_html(url,encoding="utf-8")
+position<-web %>% html_nodes("div.pages_content") %>% html_text()
+print(position)
+library(jiebaRD)
+library(jiebaR)
+engine_s<-worker(stop_word = "D:\\stopwords.txt")
+seg<-segment(position,engine_s)
+f<-freq(seg)
+f<-f[order(f[2],decreasing=TRUE),]
+print(f)
+library(yaml)
+library(wordcloud2)
+f1<-f[1:100,] 
+wordcloud2(f1, size = 0.8 ,shape='circle')
+
+```
+
