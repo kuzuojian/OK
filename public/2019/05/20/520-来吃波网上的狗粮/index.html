@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>520，来吃波网上的狗粮 - A Hugo website</title>
+<meta property="og:title" content="520，来吃波网上的狗粮 - A Hugo website">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">1 min read</span>
+    
+
+    <h1 class="article-title">520，来吃波网上的狗粮</h1>
+
+    
+    <span class="article-date">2019-05-20</span>
+    
+
+    <div class="article-content">
+      <pre><code class="language-r">library(rvest)
+</code></pre>
+
+<pre><code>## Loading required package: xml2
+</code></pre>
+
+<pre><code class="language-r">library(stringr)
+library(rlist)
+url &lt;- 'https://www.baidu.com/s?ie=utf-8&amp;f=3&amp;rsv_bp=1&amp;tn=80035161_2_dg&amp;wd=521&amp;oq=521&amp;rsv_pq=a15ec52e001de2a8&amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;rqlang=cn&amp;rsv_ent'
+ httr_web &lt;- read_html(url,encoding = 'utf-8')
+ title &lt;- httr_web%&gt;%html_nodes('h3&gt;a')%&gt;%html_text(trim = T)
+ author &lt;- httr_web%&gt;%html_nodes('p.c-author')%&gt;%html_text(trim = T)
+  candidate_date=Sys.Date()%&gt;%format('%Y年%m月%d日')
+  fun &lt;- function(x){
+    re=if(length(x)==3){
+       re=c(x[1],candidate_date,x[length(x)])
+    }else{
+       re= x[-2]
+    }
+     re=data.frame(发布者=re[1],日期=re[2],时间=re[3])
+     return(re)
+  }
+  news_521 &lt;- data.frame(标题=title,author%&gt;%str_split('s')%&gt;%lapply(fun)%&gt;%list.stack())
+  tail(news_521)
+</code></pre>
+
+<pre><code>## [1] 标题
+## &lt;0 rows&gt; (or 0-length row.names)
+</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

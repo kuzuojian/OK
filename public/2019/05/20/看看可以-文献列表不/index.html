@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<title>看看可以🥧文献列表不 - A Hugo website</title>
+<meta property="og:title" content="看看可以🥧文献列表不 - A Hugo website">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">看看可以🥧文献列表不</h1>
+
+    
+    <span class="article-date">2019-05-20</span>
+    
+
+    <div class="article-content">
+      
+
+
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre class="r"><code>library(knitr)
+link &lt;- &#39;https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster&#39;
+web &lt;- read_html(link)
+title &lt;- web %&gt;% html_nodes(&#39;div.rslt p.title a&#39;) %&gt;%html_text()
+author &lt;- web %&gt;% html_nodes(&#39;div.supp p.desc&#39;) %&gt;%html_text()
+journal &lt;- web %&gt;% html_nodes(&#39;div.supp p.details span&#39;) %&gt;%html_text()
+dat &lt;- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format=&quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Title
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Journal
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Problems with the WHO TB Model.
+</td>
+<td style="text-align:left;">
+Wallace D, Wallace R.
+</td>
+<td style="text-align:left;">
+Math Biosci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A minimal amount of tissue-based pH measurement to improve quality control in neuropsychiatric postmortem brain studies.
+</td>
+<td style="text-align:left;">
+Ono CT, Yu Z, Kikuchi Y, Kunii Y, Hino M, Matsumoto J, Nagaoka A, Ito J, Iwasaki Y, Hagihara H, Miyakawa T, Yoshida M, Saito Y, Niwa SI, Yabe H, Kakita A, Tomita H.
+</td>
+<td style="text-align:left;">
+Psychiatry Clin Neurosci
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Association Between Earthquake Exposures and Mental Health Outcomes in Phulpingdanda Village After the 2015 Nepal Earthquakes.
+</td>
+<td style="text-align:left;">
+Schwind JS, Norman SA, Brown R, Frances RH, Koss E, Karmacharya D, Santangelo SL.
+</td>
+<td style="text-align:left;">
+Community Ment Health J
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Road traffic injuries measures in the Eastern Mediterranean Region: findings from the Global Status Report on Road Safety - 2015.
+</td>
+<td style="text-align:left;">
+Soori H, Khorasani-Zavareh D.
+</td>
+<td style="text-align:left;">
+J Inj Violence Res
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Experimental Study of Leakage Monitoring of Diaphragm Walls Based on Distributed Optical Fiber Temperature Measurement Technology.
+</td>
+<td style="text-align:left;">
+Liu T, Sun W, Kou H, Yang Z, Meng Q, Zheng Y, Wang H, Yang X.
+</td>
+<td style="text-align:left;">
+Sensors (Basel)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rethinking Resilience Analytics.
+</td>
+<td style="text-align:left;">
+Eisenberg D, Seager T, Alderson DL.
+</td>
+<td style="text-align:left;">
+Risk Anal
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Impact of Natural Disasters on Health Outcomes and Cancer Among Older Adults.
+</td>
+<td style="text-align:left;">
+Prohaska TR, Peters KE.
+</td>
+<td style="text-align:left;">
+Gerontologist
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Associations of community structure and functions of benthic invertebrates with nickel concentrations: analyses from field surveys.
+</td>
+<td style="text-align:left;">
+Takeshita KM, Misaki T, Hayashi TI, Yokomizo H.
+</td>
+<td style="text-align:left;">
+Environ Toxicol Chem
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Proposal of a two-step process for the diagnosis of sepsis-induced disseminated intravascular coagulation.
+</td>
+<td style="text-align:left;">
+Iba T, Levy JH, Yamakawa K, Thachil J, Warkentin TE, Levi M; Scientific and Standardization Committee on DIC of the International Society on Thrombosis and Haemostasis.
+</td>
+<td style="text-align:left;">
+J Thromb Haemost
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Post-Traumatic Growth and Resilience Among Medical Students After the March 2011 Disaster in Fukushima, Japan.
+</td>
+<td style="text-align:left;">
+Kaye-Kauderer HP, Levine J, Takeguchi Y, Machida M, Sekine H, Taku K, Yanagisawa R, Katz C.
+</td>
+<td style="text-align:left;">
+Psychiatr Q
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vulnerability and ecological footprint: a comparison between urban Taipei and rural Yunlin, Taiwan.
+</td>
+<td style="text-align:left;">
+Lee YJ, Lin SY.
+</td>
+<td style="text-align:left;">
+Environ Sci Pollut Res Int
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Initial Study on Thatched Roofing Assembly Ignition Vulnerabilities to Firebrand Showers.
+</td>
+<td style="text-align:left;">
+Suzuki S, Manzello SL.
+</td>
+<td style="text-align:left;">
+Fire Saf J
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Investigating Effect of Wind Speeds on Structural Firebrand Generation in Laboratory Scale Experiments.
+</td>
+<td style="text-align:left;">
+Suzuki S, Manzello SL.
+</td>
+<td style="text-align:left;">
+Int J Heat Mass Transf
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Lectin-stimulated cellular iron uptake and toxin generation in the freshwater cyanobacterium Microcystis aeruginosa.
+</td>
+<td style="text-align:left;">
+Takaara T, Sasaki S, Fujii M, Ito H, Masago Y, Omura T.
+</td>
+<td style="text-align:left;">
+Harmful Algae
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Hospital, health, and community burden after oil refinery fires, Richmond, California 2007 and 2012.
+</td>
+<td style="text-align:left;">
+Remy LL, Clay T, Byers V, Rosenfeld PE.
+</td>
+<td style="text-align:left;">
+Environ Health
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+A modelling approach to assess the impact of land mining on marine biodiversity: Assessment in coastal catchments experiencing catastrophic events (SW Brazil).
+</td>
+<td style="text-align:left;">
+Magris RA, Marta-Almeida M, Monteiro JAF, Ban NC.
+</td>
+<td style="text-align:left;">
+Sci Total Environ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cetaceans and microplastics: First report of microplastic ingestion by a coastal delphinid, Sousa chinensis.
+</td>
+<td style="text-align:left;">
+Zhu J, Yu X, Zhang Q, Li Y, Tan S, Li D, Yang Z, Wang J.
+</td>
+<td style="text-align:left;">
+Sci Total Environ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Growth kinetics of Candidatus ‘Methanoperedens nitroreducens’ enriched in a laboratory reactor.
+</td>
+<td style="text-align:left;">
+Lu P, Liu T, Ni BJ, Guo J, Yuan Z, Hu S.
+</td>
+<td style="text-align:left;">
+Sci Total Environ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Ingestion bioaccessibility of indoor dust-bound PAHs: Inclusion of a sorption sink to simulate passive transfer across the small intestine.
+</td>
+<td style="text-align:left;">
+Gao P, Liu D, Guo L, He C, Lin N, Xing Y, Yao C, Wu B, Zheng Z, Wang Y, Hang J.
+</td>
+<td style="text-align:left;">
+Sci Total Environ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Extending the Reach of Pediatric Emergency Preparedness: A Virtual Tabletop Exercise Targeting Children’s Needs.
+</td>
+<td style="text-align:left;">
+So M, Dziuban EJ, Franks JL, Cobham-Owens K, Schonfeld DJ, Gardner AH, Krug SE, Peacock G, Chung S.
+</td>
+<td style="text-align:left;">
+Public Health Rep
+</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>write.table(dat, &#39;disaster_paper.txt&#39;, sep=&quot;&quot;, row.names = F, quote = F)</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

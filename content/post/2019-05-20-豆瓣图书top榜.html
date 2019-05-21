@@ -1,0 +1,27 @@
+---
+title: 豆瓣图书top榜
+author: 范琴
+date: '2019-05-20'
+slug: 豆瓣图书top榜
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre class="r"><code>library(xml2)
+ book &lt;-data.frame()
+ for (i in 1:10){url &lt;- paste0(&quot;https://book.douban.com/top250?start=&quot;,(i-1)*25) #paste0()
+ web &lt;- read_html(url,encoding=&quot;UTF-8&quot;)
+  name &lt;- web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;div.pl2&gt;a&quot;) %&gt;% html_text()
+  info &lt;-web %&gt;% html_nodes(&quot;tr&gt;td:nth-child(2)&gt;p.pl&quot;) %&gt;% html_text()
+  point&lt;-web %&gt;% html_nodes(&quot;div.star.clearfix&gt;span.rating_nums&quot;) %&gt;% html_text() %&gt;% as.numeric()
+   value&lt;-web %&gt;% html_nodes(&quot;div.star.clearfix&gt;span.pl&quot;) %&gt;% html_text() %&gt;% as.character()
+    bookinfo &lt;-data.frame(name,info,point,value)
+    book &lt;-rbind(book,bookinfo)
+ }
+  write.csv(book,file=&quot;douban_book.csv&quot;) </code></pre>

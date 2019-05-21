@@ -26,6 +26,10 @@ library(yaml)
 library(wordcloud2)
 f1<-f[1:100,] 
 wordcloud2(f1, size = 0.8 ,shape='circle')
+wordcloud2(f1, size = 0.8 ,shape='star')
+path<-"E://dang.png"
+wordcloud2(f1,size = 1.3,figPath =path)
+letterCloud(f1, word="党",size = 1)
 
 ```
 

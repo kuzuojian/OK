@@ -1,0 +1,23 @@
+---
+title: "看看可以\U0001F967文献列表不"
+author: 范琴
+date: '2019-05-20'
+slug: 看看可以-文献列表不
+categories:
+  - R
+tags:
+  - R Markdown
+---
+```{r}
+library(rvest)
+library(knitr)
+link <- 'https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster'
+web <- read_html(link)
+title <- web %>% html_nodes('div.rslt p.title a') %>%html_text()
+author <- web %>% html_nodes('div.supp p.desc') %>%html_text()
+journal <- web %>% html_nodes('div.supp p.details span') %>%html_text()
+dat <- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format="html")
+write.table(dat, 'disaster_paper.txt', sep="", row.names = F, quote = F)
+
+```

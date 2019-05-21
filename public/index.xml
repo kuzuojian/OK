@@ -12,6 +12,60 @@
     
     
     <item>
+      <title>520，来吃波网上的狗粮</title>
+      <link>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
+      <description>library(rvest)## 载入需要的程辑包：xml2library(stringr)library(rlist)url &amp;lt;- &amp;#39;https://www.baidu.com/s?ie=utf-8&amp;amp;f=3&amp;amp;rsv_bp=1&amp;amp;tn=80035161_2_dg&amp;amp;wd=521&amp;amp;oq=521&amp;amp;rsv_pq=a15ec52e001de2a8&amp;amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;amp;rqlang=cn&amp;amp;rsv_ent&amp;#39;httr_web &amp;lt;- read_html(url,encoding = &amp;#39;utf-8&amp;#39;)title &amp;lt;- httr_web%&amp;gt;%html_nodes(&amp;#39;h3&amp;gt;a&amp;#39;)%&amp;gt;%html_text(trim = T)author &amp;lt;- httr_web%&amp;gt;%html_nodes(&amp;#39;p.c-author&amp;#39;)%&amp;gt;%html_text(trim = T)candidate_date=Sys.Date()%&amp;gt;%format(&amp;#39;%Y年%m月%d日&amp;#39;)fun &amp;lt;- function(x){re=if(length(x)==3){re=c(x[1],candidate_date,x[length(x)])}else{re= x[-2]}re=data.frame(发布者=re[1],日期=re[2],时间=re[3])return(re)}news_521 &amp;lt;- data.frame(标题=title,author%&amp;gt;%str_split(&amp;#39;s&amp;#39;)%&amp;gt;%lapply(fun)%&amp;gt;%list.stack())tail(news_521)## [1] 标题## &amp;lt;0 行&amp;gt; (或0-长度的row.names)</description>
+    </item>
+    
+    <item>
+      <title>520，来吃波网上的狗粮</title>
+      <link>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
+      <description>library(rvest)  ## Loading required package: xml2  library(stringr) library(rlist) url &amp;lt;- &#39;https://www.baidu.com/s?ie=utf-8&amp;amp;f=3&amp;amp;rsv_bp=1&amp;amp;tn=80035161_2_dg&amp;amp;wd=521&amp;amp;oq=521&amp;amp;rsv_pq=a15ec52e001de2a8&amp;amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;amp;rqlang=cn&amp;amp;rsv_ent&#39; httr_web &amp;lt;- read_html(url,encoding = &#39;utf-8&#39;) title &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;h3&amp;gt;a&#39;)%&amp;gt;%html_text(trim = T) author &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;p.c-author&#39;)%&amp;gt;%html_text(trim = T) candidate_date=Sys.Date()%&amp;gt;%format(&#39;%Y年%m月%d日&#39;) fun &amp;lt;- function(x){ re=if(length(x)==3){ re=c(x[1],candidate_date,x[length(x)]) }else{ re= x[-2] } re=data.frame(发布者=re[1],日期=re[2],时间=re[3]) return(re) } news_521 &amp;lt;- data.frame(标题=title,author%&amp;gt;%str_split(&#39;s&#39;)%&amp;gt;%lapply(fun)%&amp;gt;%list.stack()) tail(news_521)  ## [1] 标题 ## &amp;lt;0 rows&amp;gt; (or 0-length row.names)  </description>
+    </item>
+    
+    <item>
+      <title>520，来吃波网上的狗粮</title>
+      <link>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
+      <description>library(rvest)  ## Loading required package: xml2  library(stringr) library(rlist) url &amp;lt;- &#39;https://www.baidu.com/s?ie=utf-8&amp;amp;f=3&amp;amp;rsv_bp=1&amp;amp;tn=80035161_2_dg&amp;amp;wd=521&amp;amp;oq=521&amp;amp;rsv_pq=a15ec52e001de2a8&amp;amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;amp;rqlang=cn&amp;amp;rsv_ent&#39; httr_web &amp;lt;- read_html(url,encoding = &#39;utf-8&#39;) title &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;h3&amp;gt;a&#39;)%&amp;gt;%html_text(trim = T) author &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;p.c-author&#39;)%&amp;gt;%html_text(trim = T) candidate_date=Sys.Date()%&amp;gt;%format(&#39;%Y年%m月%d日&#39;) fun &amp;lt;- function(x){ re=if(length(x)==3){ re=c(x[1],candidate_date,x[length(x)]) }else{ re= x[-2] } re=data.frame(发布者=re[1],日期=re[2],时间=re[3]) return(re) } news_521 &amp;lt;- data.frame(标题=title,author%&amp;gt;%str_split(&#39;s&#39;)%&amp;gt;%lapply(fun)%&amp;gt;%list.stack()) tail(news_521)  ## [1] 标题 ## &amp;lt;0 rows&amp;gt; (or 0-length row.names)  </description>
+    </item>
+    
+    <item>
+      <title>来吧，看看可以爬文献列表不</title>
+      <link>/2019/05/20/%E6%9D%A5%E5%90%A7-%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5%E7%88%ACwen/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/%E6%9D%A5%E5%90%A7-%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5%E7%88%ACwen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>看看可以🥧文献列表不</title>
+      <link>/2019/05/20/%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5-%E6%96%87%E7%8C%AE%E5%88%97%E8%A1%A8%E4%B8%8D/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5-%E6%96%87%E7%8C%AE%E5%88%97%E8%A1%A8%E4%B8%8D/</guid>
+      <description>library(rvest)## 载入需要的程辑包：xml2library(knitr)link &amp;lt;- &amp;#39;https://www.ncbi.nlm.nih.gov/pubmed/?term=disaster&amp;#39;web &amp;lt;- read_html(link)title &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.rslt p.title a&amp;#39;) %&amp;gt;%html_text()author &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.supp p.desc&amp;#39;) %&amp;gt;%html_text()journal &amp;lt;- web %&amp;gt;% html_nodes(&amp;#39;div.supp p.details span&amp;#39;) %&amp;gt;%html_text()dat &amp;lt;- data.frame(Title = title, Author = author, Journal = journal)kable(dat, format=&amp;quot;html&amp;quot;)TitleAuthorJournalProblems with the WHO TB Model.Wallace D, Wallace R.</description>
+    </item>
+    
+    <item>
+      <title>豆瓣图书top榜</title>
+      <link>/2019/05/20/%E8%B1%86%E7%93%A3%E5%9B%BE%E4%B9%A6top%E6%A6%9C/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/20/%E8%B1%86%E7%93%A3%E5%9B%BE%E4%B9%A6top%E6%A6%9C/</guid>
+      <description>library(rvest)## 载入需要的程辑包：xml2library(xml2)book &amp;lt;-data.frame()for (i in 1:10){url &amp;lt;- paste0(&amp;quot;https://book.douban.com/top250?start=&amp;quot;,(i-1)*25) #paste0()web &amp;lt;- read_html(url,encoding=&amp;quot;UTF-8&amp;quot;)name &amp;lt;- web %&amp;gt;% html_nodes(&amp;quot;tr&amp;gt;td:nth-child(2)&amp;gt;div.pl2&amp;gt;a&amp;quot;) %&amp;gt;% html_text()info &amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;tr&amp;gt;td:nth-child(2)&amp;gt;p.pl&amp;quot;) %&amp;gt;% html_text()point&amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;div.star.clearfix&amp;gt;span.rating_nums&amp;quot;) %&amp;gt;% html_text() %&amp;gt;% as.numeric()value&amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;div.star.clearfix&amp;gt;span.pl&amp;quot;) %&amp;gt;% html_text() %&amp;gt;% as.character()bookinfo &amp;lt;-data.frame(name,info,point,value)book &amp;lt;-rbind(book,bookinfo)}write.csv(book,file=&amp;quot;douban_book.csv&amp;quot;) </description>
+    </item>
+    
+    <item>
       <title>😄哈哈哈我终于爬成功了</title>
       <link>/2019/05/20/%E5%93%88%E5%93%88%E5%93%88%E6%88%91%E7%BB%88%E4%BA%8E%E7%88%AC%E6%88%90%E5%8A%9F%E4%BA%86/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
