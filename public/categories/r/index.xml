@@ -21,24 +21,6 @@
     </item>
     
     <item>
-      <title>520，来吃波网上的狗粮</title>
-      <link>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
-      <description>library(rvest)  ## Loading required package: xml2  library(stringr) library(rlist) url &amp;lt;- &#39;https://www.baidu.com/s?ie=utf-8&amp;amp;f=3&amp;amp;rsv_bp=1&amp;amp;tn=80035161_2_dg&amp;amp;wd=521&amp;amp;oq=521&amp;amp;rsv_pq=a15ec52e001de2a8&amp;amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;amp;rqlang=cn&amp;amp;rsv_ent&#39; httr_web &amp;lt;- read_html(url,encoding = &#39;utf-8&#39;) title &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;h3&amp;gt;a&#39;)%&amp;gt;%html_text(trim = T) author &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;p.c-author&#39;)%&amp;gt;%html_text(trim = T) candidate_date=Sys.Date()%&amp;gt;%format(&#39;%Y年%m月%d日&#39;) fun &amp;lt;- function(x){ re=if(length(x)==3){ re=c(x[1],candidate_date,x[length(x)]) }else{ re= x[-2] } re=data.frame(发布者=re[1],日期=re[2],时间=re[3]) return(re) } news_521 &amp;lt;- data.frame(标题=title,author%&amp;gt;%str_split(&#39;s&#39;)%&amp;gt;%lapply(fun)%&amp;gt;%list.stack()) tail(news_521)  ## [1] 标题 ## &amp;lt;0 rows&amp;gt; (or 0-length row.names)  </description>
-    </item>
-    
-    <item>
-      <title>520，来吃波网上的狗粮</title>
-      <link>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</link>
-      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/05/20/520-%E6%9D%A5%E5%90%83%E6%B3%A2%E7%BD%91%E4%B8%8A%E7%9A%84%E7%8B%97%E7%B2%AE/</guid>
-      <description>library(rvest)  ## Loading required package: xml2  library(stringr) library(rlist) url &amp;lt;- &#39;https://www.baidu.com/s?ie=utf-8&amp;amp;f=3&amp;amp;rsv_bp=1&amp;amp;tn=80035161_2_dg&amp;amp;wd=521&amp;amp;oq=521&amp;amp;rsv_pq=a15ec52e001de2a8&amp;amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;amp;rqlang=cn&amp;amp;rsv_ent&#39; httr_web &amp;lt;- read_html(url,encoding = &#39;utf-8&#39;) title &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;h3&amp;gt;a&#39;)%&amp;gt;%html_text(trim = T) author &amp;lt;- httr_web%&amp;gt;%html_nodes(&#39;p.c-author&#39;)%&amp;gt;%html_text(trim = T) candidate_date=Sys.Date()%&amp;gt;%format(&#39;%Y年%m月%d日&#39;) fun &amp;lt;- function(x){ re=if(length(x)==3){ re=c(x[1],candidate_date,x[length(x)]) }else{ re= x[-2] } re=data.frame(发布者=re[1],日期=re[2],时间=re[3]) return(re) } news_521 &amp;lt;- data.frame(标题=title,author%&amp;gt;%str_split(&#39;s&#39;)%&amp;gt;%lapply(fun)%&amp;gt;%list.stack()) tail(news_521)  ## [1] 标题 ## &amp;lt;0 rows&amp;gt; (or 0-length row.names)  </description>
-    </item>
-    
-    <item>
       <title>来吧，看看可以爬文献列表不</title>
       <link>/2019/05/20/%E6%9D%A5%E5%90%A7-%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5%E7%88%ACwen/</link>
       <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>

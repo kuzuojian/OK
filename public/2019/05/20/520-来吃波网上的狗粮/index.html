@@ -72,19 +72,18 @@
     
 
     <div class="article-content">
-      <pre><code class="language-r">library(rvest)
-</code></pre>
+      
 
-<pre><code>## Loading required package: xml2
-</code></pre>
 
-<pre><code class="language-r">library(stringr)
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre class="r"><code>library(stringr)
 library(rlist)
-url &lt;- 'https://www.baidu.com/s?ie=utf-8&amp;f=3&amp;rsv_bp=1&amp;tn=80035161_2_dg&amp;wd=521&amp;oq=521&amp;rsv_pq=a15ec52e001de2a8&amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;rqlang=cn&amp;rsv_ent'
- httr_web &lt;- read_html(url,encoding = 'utf-8')
- title &lt;- httr_web%&gt;%html_nodes('h3&gt;a')%&gt;%html_text(trim = T)
- author &lt;- httr_web%&gt;%html_nodes('p.c-author')%&gt;%html_text(trim = T)
-  candidate_date=Sys.Date()%&gt;%format('%Y年%m月%d日')
+url &lt;- &#39;https://www.baidu.com/s?ie=utf-8&amp;f=3&amp;rsv_bp=1&amp;tn=80035161_2_dg&amp;wd=521&amp;oq=521&amp;rsv_pq=a15ec52e001de2a8&amp;rsv_t=a3d2BRer4Aj0OGIndsfKZ6xuPJd1Mn26CanLz02g8dB7uenVKZB5A1ilju3xO%2BoDd6RMYA&amp;rqlang=cn&amp;rsv_ent&#39;
+ httr_web &lt;- read_html(url,encoding = &#39;utf-8&#39;)
+ title &lt;- httr_web%&gt;%html_nodes(&#39;h3&gt;a&#39;)%&gt;%html_text(trim = T)
+ author &lt;- httr_web%&gt;%html_nodes(&#39;p.c-author&#39;)%&gt;%html_text(trim = T)
+  candidate_date=Sys.Date()%&gt;%format(&#39;%Y年%m月%d日&#39;)
   fun &lt;- function(x){
     re=if(length(x)==3){
        re=c(x[1],candidate_date,x[length(x)])
@@ -94,13 +93,10 @@ url &lt;- 'https://www.baidu.com/s?ie=utf-8&amp;f=3&amp;rsv_bp=1&amp;tn=80035161
      re=data.frame(发布者=re[1],日期=re[2],时间=re[3])
      return(re)
   }
-  news_521 &lt;- data.frame(标题=title,author%&gt;%str_split('s')%&gt;%lapply(fun)%&gt;%list.stack())
-  tail(news_521)
-</code></pre>
-
+  news_521 &lt;- data.frame(标题=title,author%&gt;%str_split(&#39;s&#39;)%&gt;%lapply(fun)%&gt;%list.stack())
+  tail(news_521)</code></pre>
 <pre><code>## [1] 标题
-## &lt;0 rows&gt; (or 0-length row.names)
-</code></pre>
+## &lt;0 行&gt; (或0-长度的row.names)</code></pre>
 
     </div>
   </article>
